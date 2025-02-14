@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--    ImageView for Blur background for the displaying App logo on side corner -->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"
+            android:src="@drawable/creativity"
+            app:layout_constraintEnd_toStartOf="@id/linearLayout2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_bg"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@id/adslinearLayout"
+            app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+            <!--        TextView for show static text-->
+            <TextView
+                android:id="@+id/coinscountTxv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You Have :  "
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <!--        Imageview for displaying static image-->
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/user" />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/adslinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/grey_bg"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+            <!--        TextView for show static text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earn Coin : Ads"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <!--        Imageview for displaying static image-->
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/coins" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/grey_bg"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView2">
+
+            <!--        TextView for show static text-->
+            <TextView
+                android:id="@+id/coinscountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Coins : 50"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <!--        Imageview for displaying static image-->
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/coins" />
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"/>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayout"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            &lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:id="@+id/ProfileImv"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="35dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="35dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_marginLeft="10dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_weight="0"&ndash;&gt;-->
+<!--            &lt;!&ndash;                tools:src="@drawable/users" />&ndash;&gt;-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/ProfileImv"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:src="@drawable/users" />-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/NameTv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="TextView"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            &lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:id="@+id/coinsImg"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="35dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="35dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_weight="0"&ndash;&gt;-->
+<!--            &lt;!&ndash;                tools:src="@drawable/coins"/>&ndash;&gt;-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/CoinImg"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_weight="0"-->
+<!--                android:src="@drawable/coins" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/CoinTv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="0"-->
+<!--                android:text="TextView"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/categoryTv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?actionBarSize"-->
+<!--            android:background="@drawable/category_bg"-->
+<!--            android:elevation="10dp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingLeft="15dp"-->
+<!--            android:text="Categories"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:layout_editor_absoluteY="373dp" />-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
